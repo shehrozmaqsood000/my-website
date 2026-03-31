@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HOPE Preparations – House of Progressive Education</title>
+  <meta name="description" content="HOPE Preparations – Premier coaching academy in Sahiwal for CSS, PMS, FPSC, PPSC, NTS, IELTS, LAT, PMA and all competitive exams."/>
+  <link rel="icon" href="assets/images/logo.png" type="image/png"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span><i class="fas fa-map-marker-alt"></i> 05-Q Masjid Shuhhada Chowk, Farid Town, Sahiwal</span>
+    <span class="topbar-right">
+      <a href="tel:03457345203"><i class="fas fa-phone"></i> 0345-7345203</a>
+      <a href="tel:03217345203"><i class="fas fa-mobile-alt"></i> 0321-7345203</a>
+      <a href="tel:0404555203"><i class="fas fa-phone-volume"></i> 040-4555203</a>
+    </span>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo-wrap">
+      <img src="assets/images/logo.png" alt="HOPE Logo" class="logo-img" onerror="this.style.display='none'"/>
+      <div class="logo-text">
+        <span class="logo-main">HOPE</span>
+        <span class="logo-sub">PREPARATIONS</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="pages/about.html">About</a></li>
+      <li class="dropdown">
+        <a href="pages/courses.html">Courses <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="pages/courses.html#css-pms">CSS / PMS / PCS</a></li>
+          <li><a href="pages/courses.html#fpsc-ppsc">FPSC / PPSC / NTS</a></li>
+          <li><a href="pages/courses.html#ielts">IELTS / PTE / Spoken English</a></li>
+          <li><a href="pages/courses.html#computer">Computer Sciences</a></li>
+          <li><a href="pages/courses.html#lat">LAT / GAT / PMA</a></li>
+          <li><a href="pages/courses.html#one-paper">One Paper MCQs</a></li>
+        </ul>
+      </li>
+      <li><a href="pages/faculty.html">Faculty</a></li>
+      <li><a href="pages/schedule.html">Schedule</a></li>
+      <li><a href="pages/admissions.html">Admissions</a></li>
+      <li><a href="pages/contact.html">Contact</a></li>
+      <li><a href="pages/login.html" class="btn-nav-login"><i class="fas fa-user"></i> Login</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+  <div class="hero-slider" id="heroSlider">
+    <div class="slide active" style="background-image: linear-gradient(120deg,rgba(0,40,100,0.82) 40%,rgba(200,30,30,0.55) 100%), url('assets/images/banner-main.jpg');">
+      <div class="slide-content animate-fade">
+        <span class="hero-badge">Sahiwal's #1 Competitive Exam Academy</span>
+        <h1>Transform Your Future<br><span>With HOPE</span></h1>
+        <p>Pakistan's most dedicated coaching academy for CSS, PMS, FPSC, PPSC, IELTS and all competitive exams – both on-campus &amp; online.</p>
+        <div class="hero-btns">
+          <a href="pages/admissions.html" class="btn btn-primary">Apply Now</a>
+          <a href="pages/courses.html" class="btn btn-outline-white">Explore Courses</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide" style="background-image: linear-gradient(120deg,rgba(0,40,100,0.82) 40%,rgba(20,120,40,0.55) 100%), url('assets/images/banner-ielts.jpg');">
+      <div class="slide-content animate-fade">
+        <span class="hero-badge">IDP &amp; British Council Certified</span>
+        <h1>IELTS / PTE<br><span>Spoken English</span></h1>
+        <p>Academic | General | UKVI | Life Skills – Under Expert Certified Instructors with 10+ years experience.</p>
+        <div class="hero-btns">
+          <a href="pages/courses.html#ielts" class="btn btn-primary">Learn More</a>
+          <a href="pages/admissions.html" class="btn btn-outline-white">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide" style="background-image: linear-gradient(120deg,rgba(0,40,100,0.82) 40%,rgba(120,0,120,0.5) 100%), url('assets/images/banner-law.jpg');">
+      <div class="slide-content animate-fade">
+        <span class="hero-badge">HEC Affiliated Universities</span>
+        <h1>Law Admission<br><span>Test (LAT)</span></h1>
+        <p>4-Year LLB degree program preparation for HEC affiliated universities. 30-Day intensive course. Admissions Open 2026!</p>
+        <div class="hero-btns">
+          <a href="pages/courses.html#lat" class="btn btn-primary">Course Details</a>
+          <a href="pages/admissions.html" class="btn btn-outline-white">Register Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="slider-btn prev" id="slidePrev"><i class="fas fa-chevron-left"></i></button>
+  <button class="slider-btn next" id="slideNext"><i class="fas fa-chevron-right"></i></button>
+  <div class="slider-dots" id="sliderDots"></div>
+</section>
+
+<!-- STATS TICKER -->
+<div class="stats-bar">
+  <div class="container stats-inner">
+    <div class="stat-item"><span class="stat-num counter" data-target="5000">0</span><span>+ Students Enrolled</span></div>
+    <div class="stat-item"><span class="stat-num counter" data-target="7">0</span><span>+ Years of Excellence</span></div>
+    <div class="stat-item"><span class="stat-num counter" data-target="15">0</span><span>+ Expert Faculty</span></div>
+    <div class="stat-item"><span class="stat-num counter" data-target="12">0</span><span>+ Courses Offered</span></div>
+    <div class="stat-item"><span class="stat-num counter" data-target="95">0</span><span>% Success Rate</span></div>
+  </div>
+</div>
+
+<!-- MARQUEE ANNOUNCEMENT -->
+<div class="announcement-bar">
+  <span class="ann-label"><i class="fas fa-bullhorn"></i> ADMISSIONS OPEN</span>
+  <div class="marquee">
+    <span>🎓 New Sessions Starting – CSS/PMS/PCS | FPSC/PPSC/NTS | One Paper MCQs | IELTS/PTE/Spoken English | LAT/GAT/PMA | Computer Courses | All Competitive Exams &nbsp;&nbsp;&nbsp; 📞 Contact: 0345-7345203 | 0321-7345203 | 040-4555203 &nbsp;&nbsp;&nbsp; 📍 05-Q Masjid Shuhhada Chowk, Farid Town, Sahiwal &nbsp;&nbsp;&nbsp;</span>
+  </div>
+</div>
+
+<!-- COURSES SECTION -->
+<section class="section courses-section" id="courses">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">What We Offer</span>
+      <h2>Our Courses</h2>
+      <p>Comprehensive preparation programs for all major competitive and academic examinations</p>
+    </div>
+    <div class="courses-grid">
+      <a href="pages/courses.html#css-pms" class="course-card" data-delay="0">
+        <div class="course-icon"><i class="fas fa-landmark"></i></div>
+        <h3>CSS / PMS / PCS</h3>
+        <p>Complete preparation for Civil Services Examinations with expert guidance and study material.</p>
+        <div class="course-meta"><span><i class="fas fa-clock"></i> 6 Months</span><span><i class="fas fa-chalkboard-teacher"></i> On-Campus &amp; Online</span></div>
+        <span class="course-link">View Course <i class="fas fa-arrow-right"></i></span>
+      </a>
+      <a href="pages/courses.html#fpsc-ppsc" class="course-card" data-delay="100">
+        <div class="course-icon"><i class="fas fa-file-alt"></i></div>
+        <h3>FPSC / PPSC / NTS</h3>
+        <p>Targeted preparation for federal and provincial service commission exams including NTS and PTS.</p>
+        <div class="course-meta"><span><i class="fas fa-clock"></i> 4 Months</span><span><i class="fas fa-chalkboard-teacher"></i> On-Campus &amp; Online</span></div>
+        <span class="course-link">View Course <i class="fas fa-arrow-right"></i></span>
+      </a>
+      <a href="pages/courses.html#one-paper" class="course-card" data-delay="200">
+        <div class="course-icon"><i class="fas fa-pen-to-square"></i></div>
+        <h3>One Paper MCQs</h3>
+        <p>Specialized MCQ preparation for all one-paper competitive exams covering all key subjects.</p>
+        <div class="course-meta"><span><i class="fas fa-clock"></i> 4 Months</span><span><i class="fas fa-chalkboard-teacher"></i> On-Campus &amp; Online</span></div>
+        <span class="course-link">View Course <i class="fas fa-arrow-right"></i></span>
+      </a>
+      <a href="pages/courses.html#ielts" class="course-card" data-delay="0">
+        <div class="course-icon"><i class="fas fa-globe"></i></div>
+        <h3>IELTS / PTE / Spoken English</h3>
+        <p>Academic, General, UKVI and Life Skills modules. Certified by IDP and British Council.</p>
+        <div class="course-meta"><span><i class="fas fa-clock"></i> 8 Weeks</span><span><i class="fas fa-chalkboard-teacher"></i> On-Campus &amp; Online</span></div>
+        <span class="course-link">View Course <i class="fas fa-arrow-right"></i></span>
+      </a>
+      <a href="pages/courses.html#lat" class="course-card" data-delay="100">
+        <div class="course-icon"><i class="fas fa-balance-scale"></i></div>
+        <h3>LAT / GAT / PMA / ISSB</h3>
+        <p>Law Admission Test, Graduate Assessment Test, PMA Long Course, and ISSB preparations.</p>
+        <div class="course-meta"><span><i class="fas fa-clock"></i> 30 Days – 3 Months</span><span><i class="fas fa-chalkboard-teacher"></i> On-Campus &amp; Online</span></div>
+        <span class="course-link">View Course <i class="fas fa-arrow-right"></i></span>
+      </a>
+      <a href="pages/courses.html#computer" class="course-card" data-delay="200">
+        <div class="course-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>Computer Sciences &amp; IT</h3>
+        <p>Computer Science for competitive exams + Computer Skills &amp; Training courses for all levels.</p>
+        <div class="course-meta"><span><i class="fas fa-clock"></i> Flexible Duration</span><span><i class="fas fa-chalkboard-teacher"></i> On-Campus &amp; Online</span></div>
+        <span class="course-link">View Course <i class="fas fa-arrow-right"></i></span>
+      </a>
+    </div>
+    <div class="center-btn"><a href="pages/courses.html" class="btn btn-primary">View All Courses</a></div>
+  </div>
+</section>
+
+<!-- WHY HOPE SECTION -->
+<section class="section why-section">
+  <div class="container">
+    <div class="why-inner">
+      <div class="why-text">
+        <span class="section-tag">Why Choose Us</span>
+        <h2>Why HOPE Preparations?</h2>
+        <p>HOPE – House of Progressive Education – has been Sahiwal's most trusted name for competitive exam preparation. We deliver results through dedicated teaching, structured programs, and personalized mentorship.</p>
+        <ul class="why-list">
+          <li><i class="fas fa-check-circle"></i> Expert faculty with government service backgrounds</li>
+          <li><i class="fas fa-check-circle"></i> Both on-campus and online classes via LMS</li>
+          <li><i class="fas fa-check-circle"></i> Daily newspapers, notes &amp; handouts provided</li>
+          <li><i class="fas fa-check-circle"></i> Daily individual assessment &amp; evaluation</li>
+          <li><i class="fas fa-check-circle"></i> Preparation: 7:00AM–3:00PM Online via LMS</li>
+          <li><i class="fas fa-check-circle"></i> Lectures: 3:00PM–7:00PM On-Campus &amp; Online</li>
+          <li><i class="fas fa-check-circle"></i> Mock tests, quizzes &amp; interview preparation</li>
+          <li><i class="fas fa-check-circle"></i> Free demo class available</li>
+        </ul>
+        <a href="pages/about.html" class="btn btn-primary">Learn More About Us</a>
+      </div>
+      <div class="why-image">
+        <img src="assets/images/director2.jpg" alt="HOPE Director" class="director-img"/>
+        <div class="why-badge"><i class="fas fa-star"></i> 7+ Years of Excellence</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIRECTOR MESSAGE -->
+<section class="section director-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">From the Director</span>
+      <h2>Director's Message</h2>
+    </div>
+    <div class="director-card">
+      <div class="director-photo">
+        <img src="assets/images/director2.jpg" alt="Asif Naveed – Director HOPE"/>
+        <div class="director-name-tag">
+          <strong>Asif Naveed</strong>
+          <span>Director, HOPE Preparations</span>
+        </div>
+      </div>
+      <div class="director-msg">
+        <i class="fas fa-quote-left quote-icon"></i>
+        <p>At HOPE – House of Progressive Education – we believe every aspirant deserves the best chance to achieve their dreams. Our mission is simple: provide the highest quality education and guidance for competitive exams, backed by expert faculty, structured study plans, and an environment that fosters growth and confidence.</p>
+        <p>Over the years, we have helped thousands of students from Sahiwal and surrounding areas crack the toughest competitive exams in Pakistan. Whether it is CSS, PMS, FPSC, PPSC, IELTS, or any other professional examination, our team of dedicated mentors ensures you are fully prepared.</p>
+        <p>We offer both on-campus and online learning through our modern LMS platform, ensuring that every student – regardless of location – gets the same level of attention and quality. At HOPE, your success is our success.</p>
+        <p class="director-sign"><strong>— Asif Naveed</strong>, Director HOPE Preparations</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACULTY PREVIEW -->
+<section class="section faculty-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Meet Our Experts</span>
+      <h2>Our Faculty</h2>
+      <p>Learn from the best – our faculty members are experienced professionals with government service and academic backgrounds</p>
+    </div>
+    <div class="faculty-grid">
+      <div class="faculty-card" data-delay="0">
+        <div class="faculty-img-wrap">
+          <img src="assets/images/teacher-ielts.jpg" alt="Sir Akmal Zia"/>
+        </div>
+        <div class="faculty-info">
+          <h3>Sir. Akmal Zia</h3>
+          <span class="faculty-subject">IELTS / PTE / Spoken English</span>
+          <p>EST English (BPS-15), Dept. of School Education, Govt. of Punjab. Certified Expert English Trainer from British Council. M.Phil Linguistics (English).</p>
+        </div>
+      </div>
+      <div class="faculty-card" data-delay="100">
+        <div class="faculty-img-wrap">
+          <img src="assets/images/teacher-science.jpg" alt="Asim Shabir"/>
+        </div>
+        <div class="faculty-info">
+          <h3>Asim Shabir</h3>
+          <span class="faculty-subject">Everyday Sciences</span>
+          <p>Enumerator PSER, Urban Unit, Govt. of Punjab. MSc Zoology from GCUF. Qualified Pakistan Civil Services (PSC) Exams.</p>
+        </div>
+      </div>
+      <div class="faculty-card" data-delay="200">
+        <div class="faculty-img-wrap">
+          <img src="assets/images/teacher-computer.jpg" alt="Sir Muhammad Amir"/>
+        </div>
+        <div class="faculty-info">
+          <h3>Sir. Muhammad Amir</h3>
+          <span class="faculty-subject">Computer Sciences</span>
+          <p>Subject Specialist (BPS-17) in Computer Sciences &amp; I.T. More than 10 years mentoring experience to teach aspirants for competitive exams.</p>
+        </div>
+      </div>
+      <div class="faculty-card" data-delay="0">
+        <div class="faculty-img-wrap">
+          <img src="assets/images/teacher-cs-skills.jpg" alt="Sir Babar Ali"/>
+        </div>
+        <div class="faculty-info">
+          <h3>Sir. Babar Ali</h3>
+          <span class="faculty-subject">Computer Skills &amp; Training</span>
+          <p>Instructor / Institute Placement Officer (BPS-14) in TEVTA, Sahiwal. PhD Scholar (Management Sciences) from UoSwl.</p>
+        </div>
+      </div>
+      <div class="faculty-card" data-delay="100">
+        <div class="faculty-img-wrap">
+          <img src="assets/images/teacher-gk.jpg" alt="Sir M. Waleed Fazal"/>
+        </div>
+        <div class="faculty-info">
+          <h3>Sir. M. Waleed Fazal</h3>
+          <span class="faculty-subject">General Knowledge</span>
+          <p>Crime Scene Inspector (BS-17) PFSA, HOME Department, Govt. of Punjab. More than 10 years mentoring experience to aspirants of CEs.</p>
+        </div>
+      </div>
+      <div class="faculty-card" data-delay="200">
+        <div class="faculty-img-wrap">
+          <img src="assets/images/teacher-math.jpg" alt="Sir Manzoor Ishaq"/>
+        </div>
+        <div class="faculty-info">
+          <h3>Sir. Manzoor Ishaq</h3>
+          <span class="faculty-subject">Mathematics</span>
+          <p>Lecturer Mathematics at GCUF, Sahiwal. PhD Scholar in Mathematics from GCUF. More than 5 years mentoring experience for competitive exams.</p>
+        </div>
+      </div>
+    </div>
+    <div class="center-btn"><a href="pages/faculty.html" class="btn btn-primary">View All Faculty</a></div>
+  </div>
+</section>
+
+<!-- SCHEDULE SECTION -->
+<section class="section schedule-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Timetable</span>
+      <h2>Class Schedule</h2>
+      <p>Both online and on-campus classes available for your convenience</p>
+    </div>
+    <div class="schedule-grid">
+      <div class="schedule-card online">
+        <div class="sch-icon"><i class="fas fa-laptop"></i></div>
+        <h3>Online Preparation</h3>
+        <div class="sch-time"><i class="fas fa-sun"></i> 7:00 AM – 3:00 PM</div>
+        <p>Daily online classes via LMS platform. Access notes, newspapers, quizzes &amp; recorded lectures anytime.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Live sessions on Google Meet</li>
+          <li><i class="fas fa-check"></i> LMS access 24/7</li>
+          <li><i class="fas fa-check"></i> Daily newspapers uploaded</li>
+          <li><i class="fas fa-check"></i> Mock tests online</li>
+        </ul>
+      </div>
+      <div class="schedule-card oncampus">
+        <div class="sch-icon"><i class="fas fa-school"></i></div>
+        <h3>On-Campus Lectures</h3>
+        <div class="sch-time"><i class="fas fa-moon"></i> 3:00 PM – 7:00 PM</div>
+        <p>Daily on-campus lectures at our Sahiwal campus with expert faculty, interactive sessions and assessments.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Face-to-face expert teaching</li>
+          <li><i class="fas fa-check"></i> Daily assessment &amp; evaluation</li>
+          <li><i class="fas fa-check"></i> Free handouts &amp; notes</li>
+          <li><i class="fas fa-check"></i> Interview preparation</li>
+        </ul>
+      </div>
+    </div>
+    <div class="center-btn"><a href="pages/schedule.html" class="btn btn-primary">Full Schedule</a></div>
+  </div>
+</section>
+
+<!-- SUBJECTS SECTION -->
+<section class="section subjects-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Subjects Covered</span>
+      <h2>All Subjects</h2>
+    </div>
+    <div class="subjects-grid">
+      <div class="subject-pill"><i class="fas fa-book"></i> General Knowledge</div>
+      <div class="subject-pill"><i class="fas fa-language"></i> Urdu</div>
+      <div class="subject-pill"><i class="fas fa-laptop"></i> Computer Science</div>
+      <div class="subject-pill"><i class="fas fa-calculator"></i> Mathematics</div>
+      <div class="subject-pill"><i class="fas fa-newspaper"></i> Current Affairs</div>
+      <div class="subject-pill"><i class="fas fa-flag"></i> Pakistan Affairs</div>
+      <div class="subject-pill"><i class="fas fa-history"></i> Indo-Pak History</div>
+      <div class="subject-pill"><i class="fas fa-map"></i> Geography</div>
+      <div class="subject-pill"><i class="fas fa-mosque"></i> Islamic History</div>
+      <div class="subject-pill"><i class="fas fa-flask"></i> Everyday Sciences</div>
+      <div class="subject-pill"><i class="fas fa-gavel"></i> Constitution &amp; Law</div>
+      <div class="subject-pill"><i class="fas fa-globe-asia"></i> International Relations</div>
+      <div class="subject-pill"><i class="fas fa-microphone"></i> Spoken English</div>
+      <div class="subject-pill"><i class="fas fa-pen-nib"></i> Essay Writing</div>
+      <div class="subject-pill"><i class="fas fa-brain"></i> Logical Reasoning</div>
+      <div class="subject-pill"><i class="fas fa-chart-bar"></i> Analytical Skills</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA APPLY -->
+<section class="section cta-section">
+  <div class="container">
+    <div class="cta-card">
+      <div class="cta-text">
+        <h2>Ready to Start Your Journey?</h2>
+        <p>Join thousands of successful aspirants who achieved their dreams with HOPE Preparations. New sessions starting soon!</p>
+      </div>
+      <div class="cta-actions">
+        <a href="pages/admissions.html" class="btn btn-white">Apply Now</a>
+        <a href="pages/contact.html" class="btn btn-outline-white">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="assets/images/logo.png" alt="HOPE Logo" onerror="this.style.display='none'"/>
+        <div>
+          <strong>HOPE PREPARATIONS</strong>
+          <span>House of Progressive Education</span>
+        </div>
+      </div>
+      <p>Sahiwal's most trusted competitive exam coaching academy. Preparing aspirants for CSS, PMS, FPSC, PPSC, IELTS and all government competitive examinations since 2017.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/about.html">About HOPE</a></li>
+        <li><a href="pages/courses.html">Courses</a></li>
+        <li><a href="pages/faculty.html">Faculty</a></li>
+        <li><a href="pages/schedule.html">Schedule</a></li>
+        <li><a href="pages/admissions.html">Admissions</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Courses</h4>
+      <ul>
+        <li><a href="pages/courses.html#css-pms">CSS / PMS / PCS</a></li>
+        <li><a href="pages/courses.html#fpsc-ppsc">FPSC / PPSC / NTS</a></li>
+        <li><a href="pages/courses.html#ielts">IELTS / Spoken English</a></li>
+        <li><a href="pages/courses.html#lat">LAT / GAT / PMA</a></li>
+        <li><a href="pages/courses.html#computer">Computer Courses</a></li>
+        <li><a href="pages/courses.html#one-paper">One Paper MCQs</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"></i> 05-Q Masjid Shuhhada Chowk, Farid Town, Sahiwal</li>
+        <li><i class="fas fa-phone"></i> 0345-7345203</li>
+        <li><i class="fas fa-mobile-alt"></i> 0321-7345203</li>
+        <li><i class="fas fa-phone-volume"></i> 040-4555203</li>
+        <li><i class="fas fa-envelope"></i> info@hopepreparations.pk</li>
+        <li><i class="fas fa-clock"></i> Mon–Sat: 7:00 AM – 7:00 PM</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2025 HOPE Preparations – House of Progressive Education. All Rights Reserved.</p>
+      <p><a href="pages/login.html">Student Login</a> | <a href="pages/admin-login.html">Admin Login</a></p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
