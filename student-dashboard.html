@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard – HOPE Preparations</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+.sidebar-nav a { font-size:0.85rem; }
+.tab-nav { display:flex; gap:0; border-radius:12px; overflow:hidden; border:2px solid var(--light-gray); margin-bottom:28px; flex-wrap:wrap; }
+.tab-btn { padding:12px 20px; font-weight:700; font-size:0.85rem; cursor:pointer; transition:var(--transition); color:var(--text-muted); background:transparent; border:none; font-family:var(--font-body); }
+.tab-btn.active { background:var(--primary); color:white; }
+.tab-btn:hover:not(.active) { background:var(--off-white); color:var(--primary); }
+[data-tab-content] { display:none; }
+[data-tab-content]:first-of-type { display:block; }
+.quiz-question { background:white; border-radius:var(--radius); padding:22px; margin-bottom:16px; box-shadow:var(--shadow-sm); border:1px solid var(--light-gray); }
+.quiz-question p { font-weight:700; color:var(--text-dark); margin-bottom:14px; font-size:0.95rem; }
+.quiz-options { display:flex; flex-direction:column; gap:9px; }
+.quiz-options label { display:flex; align-items:center; gap:10px; font-size:0.9rem; cursor:pointer; padding:9px 14px; border-radius:8px; border:1.5px solid var(--light-gray); transition:var(--transition); }
+.quiz-options label:hover { border-color:var(--primary); background:var(--off-white); }
+.quiz-options input:checked + span { color:var(--primary); font-weight:700; }
+.meet-card { background:linear-gradient(135deg,var(--primary),var(--primary-light)); color:white; border-radius:var(--radius); padding:28px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+.meet-card h3 { font-family:var(--font-display); font-size:1.3rem; margin-bottom:6px; }
+.meet-card p { opacity:0.85; font-size:0.9rem; }
+.fee-table th { background:var(--primary); color:white; }
+.announcement-item { background:white; border-radius:var(--radius-sm); padding:16px 18px; border-left:4px solid var(--primary); margin-bottom:12px; box-shadow:var(--shadow-sm); }
+.announcement-item h4 { font-weight:700; color:var(--text-dark); margin-bottom:4px; font-size:0.93rem; }
+.announcement-item span { font-size:0.78rem; color:var(--text-muted); }
+.announcement-item p { margin-top:8px; font-size:0.88rem; color:var(--text-body); }
+</style>
+</head>
+<body>
+<div id="studentDashboard" class="dashboard-layout">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <img src="../assets/images/logo.png" alt="Logo" style="height:34px;" onerror="this.style.display='none'"/>
+        <span>HOPE</span>
+      </div>
+    </div>
+    <div class="sidebar-user">
+      <div class="user-name" data-user-name>Loading...</div>
+      <div class="user-role">Student Portal</div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-section-label">Navigation</div>
+      <a href="#" data-tab="overview" class="active"><i class="fas fa-home"></i> Dashboard</a>
+      <a href="#" data-tab="notes"><i class="fas fa-file-pdf"></i> Notes & Materials</a>
+      <a href="#" data-tab="newspapers"><i class="fas fa-newspaper"></i> Newspapers</a>
+      <a href="#" data-tab="quiz"><i class="fas fa-question-circle"></i> Quiz & Tests</a>
+      <a href="#" data-tab="online-class"><i class="fas fa-video"></i> Online Class</a>
+      <a href="#" data-tab="announcements"><i class="fas fa-bullhorn"></i> Announcements</a>
+      <a href="#" data-tab="fee"><i class="fas fa-money-bill-wave"></i> Fee Status</a>
+      <a href="#" data-tab="profile"><i class="fas fa-user-circle"></i> My Profile</a>
+      <div class="sidebar-section-label">Account</div>
+      <a href="#" data-action="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="dashboard-main">
+    <div class="dashboard-header">
+      <h1>Welcome, <span data-user-name>Student</span>! 👋</h1>
+      <p>Your HOPE Preparations student portal – access all your resources here.</p>
+    </div>
+
+    <!-- OVERVIEW -->
+    <div data-tab-content="overview">
+      <div class="dashboard-cards">
+        <div class="dash-card blue">
+          <div class="dc-icon">📚</div>
+          <div class="dc-num">24</div>
+          <div class="dc-label">Notes Available</div>
+        </div>
+        <div class="dash-card red">
+          <div class="dc-icon">📰</div>
+          <div class="dc-num">30</div>
+          <div class="dc-label">Newspapers This Month</div>
+        </div>
+        <div class="dash-card green">
+          <div class="dc-icon">✅</div>
+          <div class="dc-num">5</div>
+          <div class="dc-label">Tests Completed</div>
+        </div>
+        <div class="dash-card gold">
+          <div class="dc-icon">🎯</div>
+          <div class="dc-num">82%</div>
+          <div class="dc-label">Average Score</div>
+        </div>
+      </div>
+      <div class="dashboard-section">
+        <h2><i class="fas fa-bullhorn" style="color:var(--accent);margin-right:8px;"></i>Latest Announcements</h2>
+        <div class="announcement-item">
+          <h4>New Session Starting – CSS/PMS 2025</h4>
+          <span><i class="fas fa-calendar"></i> March 31, 2025</span>
+          <p>New batch for CSS/PMS comprehensive preparation starts April 5th. All enrolled students must report at 3:00 PM on Monday.</p>
+        </div>
+        <div class="announcement-item" style="border-color:var(--green);">
+          <h4>Mock Test Scheduled – General Knowledge</h4>
+          <span><i class="fas fa-calendar"></i> March 28, 2025</span>
+          <p>Monthly mock test for GK will be held on April 3rd at 4:00 PM. Covers Pakistan Affairs, Islamic History, and Current Affairs.</p>
+        </div>
+        <div class="announcement-item" style="border-color:var(--gold);">
+          <h4>Fee Submission Deadline</h4>
+          <span><i class="fas fa-calendar"></i> March 25, 2025</span>
+          <p>Last date for fee submission for April batch is April 2nd. Contact admin for bank details.</p>
+        </div>
+      </div>
+      <div class="dashboard-section">
+        <h2><i class="fas fa-calendar-week" style="color:var(--primary);margin-right:8px;"></i>Today's Schedule</h2>
+        <table>
+          <thead><tr><th>Time</th><th>Subject</th><th>Teacher</th><th>Mode</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>7:00 AM – 9:00 AM</td><td>Current Affairs</td><td>Sir Waleed Fazal</td><td><span class="badge badge-blue">Online LMS</span></td><td><span class="badge badge-green">Upcoming</span></td></tr>
+            <tr><td>9:00 AM – 11:00 AM</td><td>Pakistan Affairs</td><td>Sir Manzoor Ishaq</td><td><span class="badge badge-blue">Online LMS</span></td><td><span class="badge badge-green">Upcoming</span></td></tr>
+            <tr><td>3:00 PM – 5:00 PM</td><td>General Knowledge</td><td>Sir Waleed Fazal</td><td><span class="badge badge-gold">On Campus</span></td><td><span class="badge badge-gold">Today</span></td></tr>
+            <tr><td>5:00 PM – 7:00 PM</td><td>Mathematics</td><td>Sir Manzoor Ishaq</td><td><span class="badge badge-gold">On Campus</span></td><td><span class="badge badge-gold">Today</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- NOTES -->
+    <div data-tab-content="notes" style="display:none;">
+      <div class="dashboard-section">
+        <h2><i class="fas fa-file-pdf" style="color:var(--accent);margin-right:8px;"></i>Study Notes & Materials</h2>
+        <div style="margin-bottom:20px;">
+          <input type="text" id="notesSearch" placeholder="🔍 Search notes by subject or topic..." style="width:100%;padding:12px 16px;border:2px solid var(--light-gray);border-radius:10px;font-size:0.92rem;outline:none;font-family:var(--font-body);"/>
+        </div>
+        <div id="notesList">
+          <div class="resource-card" data-date="2025-03-30"><div class="resource-icon"><i class="fas fa-file-pdf"></i></div><div class="resource-info"><strong>General Knowledge – Complete Notes</strong><span>Subject: GK | Added: March 30, 2025 | 45 pages</span></div><div class="resource-actions"><a href="#" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</a><a href="#" class="btn btn-sm btn-outline">View</a></div></div>
+          <div class="resource-card" data-date="2025-03-28"><div class="resource-icon" style="background:linear-gradient(135deg,var(--accent),#e55555);"><i class="fas fa-file-pdf"></i></div><div class="resource-info"><strong>Pakistan Affairs – Chapter 1-5</strong><span>Subject: Pakistan Affairs | Added: March 28, 2025 | 30 pages</span></div><div class="resource-actions"><a href="#" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</a><a href="#" class="btn btn-sm btn-outline">View</a></div></div>
+          <div class="resource-card" data-date="2025-03-25"><div class="resource-icon" style="background:linear-gradient(135deg,var(--green),#2a9a5c);"><i class="fas fa-file-pdf"></i></div><div class="resource-info"><strong>Current Affairs – March 2025</strong><span>Subject: Current Affairs | Added: March 25, 2025 | 20 pages</span></div><div class="resource-actions"><a href="#" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</a><a href="#" class="btn btn-sm btn-outline">View</a></div></div>
+          <div class="resource-card" data-date="2025-03-22"><div class="resource-icon" style="background:linear-gradient(135deg,#8b5cf6,#a78bfa);"><i class="fas fa-file-alt"></i></div><div class="resource-info"><strong>Islamic History – Important MCQs</strong><span>Subject: Islamic History | Added: March 22, 2025 | 18 pages</span></div><div class="resource-actions"><a href="#" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</a><a href="#" class="btn btn-sm btn-outline">View</a></div></div>
+          <div class="resource-card" data-date="2025-03-20"><div class="resource-icon" style="background:linear-gradient(135deg,#f59e0b,#fbbf24);"><i class="fas fa-calculator"></i></div><div class="resource-info"><strong>Mathematics – Practice Exercises</strong><span>Subject: Mathematics | Added: March 20, 2025 | 55 pages</span></div><div class="resource-actions"><a href="#" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</a><a href="#" class="btn btn-sm btn-outline">View</a></div></div>
+          <div class="resource-card" data-date="2025-03-18"><div class="resource-icon" style="background:linear-gradient(135deg,#06b6d4,#22d3ee);"><i class="fas fa-laptop"></i></div><div class="resource-info"><strong>Computer Sciences – Full Syllabus Notes</strong><span>Subject: Computer | Added: March 18, 2025 | 70 pages</span></div><div class="resource-actions"><a href="#" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</a><a href="#" class="btn btn-sm btn-outline">View</a></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEWSPAPERS -->
+    <div data-tab-content="newspapers" style="display:none;">
+      <div class="dashboard-section">
+        <h2><i class="fas fa-newspaper" style="color:var(--primary);margin-right:8px;"></i>Daily Newspapers</h2>
+        <div style="display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap;">
+          <input type="text" id="paperSearch" placeholder="🔍 Search newspapers..." style="flex:1;min-width:200px;padding:12px 16px;border:2px solid var(--light-gray);border-radius:10px;font-size:0.92rem;outline:none;font-family:var(--font-body);"/>
+          <input type="date" id="paperDateFilter" style="padding:12px 16px;border:2px solid var(--light-gray);border-radius:10px;font-size:0.92rem;outline:none;font-family:var(--font-body);"/>
+        </div>
+        <div id="papersList">
+          <div class="resource-card" data-date="2025-03-31"><div class="resource-icon"><i class="fas fa-newspaper"></i></div><div class="resource-info"><strong>Dawn Newspaper – March 31, 2025</strong><span>Newspaper: Dawn | Date: March 31, 2025</span></div><div class="resource-actions"><a href="#" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</a></div></div>
+          <div class="resource-card" data-date="2025-03-31"><div class="resource-icon" style="background:linear-gradient(135deg,var(--accent),#e55555);"><i class="fas fa-newspaper"></i></div><div class="resource-info"><strong>The News – March 31, 2025</strong><span>Newspaper: The News | Date: March 31, 2025</span></div><div class="resource-actions"><a href="#" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</a></div></div>
+          <div class="resource-card" data-date="2025-03-30"><div class="resource-icon" style="background:linear-gradient(135deg,var(--green),#2a9a5c);"><i class="fas fa-newspaper"></i></div><div class="resource-info"><strong>Dawn Newspaper – March 30, 2025</strong><span>Newspaper: Dawn | Date: March 30, 2025</span></div><div class="resource-actions"><a href="#" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</a></div></div>
+          <div class="resource-card" data-date="2025-03-30"><div class="resource-icon" style="background:linear-gradient(135deg,#8b5cf6,#a78bfa);"><i class="fas fa-newspaper"></i></div><div class="resource-info"><strong>Jang Urdu – March 30, 2025</strong><span>Newspaper: Jang (Urdu) | Date: March 30, 2025</span></div><div class="resource-actions"><a href="#" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</a></div></div>
+          <div class="resource-card" data-date="2025-03-29"><div class="resource-icon" style="background:linear-gradient(135deg,var(--primary),var(--primary-light));"><i class="fas fa-newspaper"></i></div><div class="resource-info"><strong>Dawn Newspaper – March 29, 2025</strong><span>Newspaper: Dawn | Date: March 29, 2025</span></div><div class="resource-actions"><a href="#" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> Download</a></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div data-tab-content="quiz" style="display:none;">
+      <div class="dashboard-section">
+        <h2><i class="fas fa-question-circle" style="color:var(--accent);margin-right:8px;"></i>Quiz & Mock Tests</h2>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:10px;">
+          <span style="font-weight:700;color:var(--primary);">General Knowledge – Practice Quiz</span>
+          <div style="background:var(--primary);color:white;padding:8px 18px;border-radius:8px;font-weight:800;font-size:1.1rem;" id="quizTimer">15:00</div>
+        </div>
+        <form id="quizForm">
+          <div class="quiz-question">
+            <p>1. Who was the founder of Pakistan?</p>
+            <div class="quiz-options">
+              <label><input type="radio" name="q1" data-correct="true" value="a"/><span>Quaid-e-Azam Muhammad Ali Jinnah</span></label>
+              <label><input type="radio" name="q1" value="b"/><span>Allama Iqbal</span></label>
+              <label><input type="radio" name="q1" value="c"/><span>Liaquat Ali Khan</span></label>
+              <label><input type="radio" name="q1" value="d"/><span>Sir Syed Ahmad Khan</span></label>
+            </div>
+          </div>
+          <div class="quiz-question">
+            <p>2. In which year was Pakistan founded?</p>
+            <div class="quiz-options">
+              <label><input type="radio" name="q2" value="a"/><span>1945</span></label>
+              <label><input type="radio" name="q2" data-correct="true" value="b"/><span>1947</span></label>
+              <label><input type="radio" name="q2" value="c"/><span>1948</span></label>
+              <label><input type="radio" name="q2" value="d"/><span>1950</span></label>
+            </div>
+          </div>
+          <div class="quiz-question">
+            <p>3. What is the capital of Pakistan?</p>
+            <div class="quiz-options">
+              <label><input type="radio" name="q3" value="a"/><span>Lahore</span></label>
+              <label><input type="radio" name="q3" value="b"/><span>Karachi</span></label>
+              <label><input type="radio" name="q3" data-correct="true" value="c"/><span>Islamabad</span></label>
+              <label><input type="radio" name="q3" value="d"/><span>Rawalpindi</span></label>
+            </div>
+          </div>
+          <div class="quiz-question">
+            <p>4. Which river is the longest in Pakistan?</p>
+            <div class="quiz-options">
+              <label><input type="radio" name="q4" data-correct="true" value="a"/><span>Indus River</span></label>
+              <label><input type="radio" name="q4" value="b"/><span>Jhelum River</span></label>
+              <label><input type="radio" name="q4" value="c"/><span>Chenab River</span></label>
+              <label><input type="radio" name="q4" value="d"/><span>Ravi River</span></label>
+            </div>
+          </div>
+          <div class="quiz-question">
+            <p>5. What is the national language of Pakistan?</p>
+            <div class="quiz-options">
+              <label><input type="radio" name="q5" value="a"/><span>English</span></label>
+              <label><input type="radio" name="q5" data-correct="true" value="b"/><span>Urdu</span></label>
+              <label><input type="radio" name="q5" value="c"/><span>Punjabi</span></label>
+              <label><input type="radio" name="q5" value="d"/><span>Sindhi</span></label>
+            </div>
+          </div>
+          <div id="quizResult" style="display:none; margin-bottom:16px;"></div>
+          <button type="button" class="btn btn-primary" onclick="submitQuiz()">Submit Quiz <i class="fas fa-check"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ONLINE CLASS -->
+    <div data-tab-content="online-class" style="display:none;">
+      <div class="dashboard-section">
+        <h2><i class="fas fa-video" style="color:var(--primary);margin-right:8px;"></i>Online Classes</h2>
+        <div class="meet-card" style="margin-bottom:20px;">
+          <div>
+            <h3><i class="fas fa-circle" style="color:#4ade80;font-size:0.7rem;margin-right:6px;"></i>Today's Live Class – General Knowledge</h3>
+            <p>Sir M. Waleed Fazal | 3:00 PM – 5:00 PM Today</p>
+            <p style="margin-top:8px; font-size:0.82rem; opacity:0.75;">Topic: Pakistan Affairs & Current Events</p>
+          </div>
+          <a href="https://meet.google.com" target="_blank" class="btn btn-white"><i class="fas fa-video"></i> Join Google Meet</a>
+        </div>
+        <div class="meet-card" style="background:linear-gradient(135deg,var(--green),#2a9a5c); margin-bottom:20px;">
+          <div>
+            <h3>Mathematics – Upcoming Class</h3>
+            <p>Sir Manzoor Ishaq | 5:00 PM – 7:00 PM Today</p>
+            <p style="margin-top:8px; font-size:0.82rem; opacity:0.75;">Topic: Number System & Algebra Basics</p>
+          </div>
+          <button class="btn btn-white" disabled>Starts at 5:00 PM</button>
+        </div>
+        <h3 style="font-family:var(--font-display);color:var(--text-dark);margin-bottom:16px;">Recorded Lectures</h3>
+        <div class="resource-card"><div class="resource-icon" style="background:linear-gradient(135deg,#ef4444,#f87171);"><i class="fab fa-youtube"></i></div><div class="resource-info"><strong>Pakistan Affairs – Lecture 1</strong><span>Recorded | Sir Waleed Fazal | March 28, 2025 | 1hr 45min</span></div><div class="resource-actions"><a href="#" class="btn btn-sm btn-primary"><i class="fas fa-play"></i> Watch</a></div></div>
+        <div class="resource-card"><div class="resource-icon" style="background:linear-gradient(135deg,#ef4444,#f87171);"><i class="fab fa-youtube"></i></div><div class="resource-info"><strong>General Knowledge – MCQs Practice Session</strong><span>Recorded | Sir Waleed Fazal | March 25, 2025 | 2hr 10min</span></div><div class="resource-actions"><a href="#" class="btn btn-sm btn-primary"><i class="fas fa-play"></i> Watch</a></div></div>
+        <div class="resource-card"><div class="resource-icon" style="background:linear-gradient(135deg,#ef4444,#f87171);"><i class="fab fa-youtube"></i></div><div class="resource-info"><strong>Mathematics – Number System Complete</strong><span>Recorded | Sir Manzoor Ishaq | March 22, 2025 | 1hr 30min</span></div><div class="resource-actions"><a href="#" class="btn btn-sm btn-primary"><i class="fas fa-play"></i> Watch</a></div></div>
+      </div>
+    </div>
+
+    <!-- ANNOUNCEMENTS -->
+    <div data-tab-content="announcements" style="display:none;">
+      <div class="dashboard-section">
+        <h2><i class="fas fa-bullhorn" style="color:var(--accent);margin-right:8px;"></i>All Announcements</h2>
+        <div class="announcement-item"><h4>🎓 New Session – CSS/PMS 2025</h4><span>March 31, 2025 | Admin</span><p>New batch for CSS/PMS comprehensive preparation starts April 5th. Preparation time: 7:00AM–3:00PM via LMS. Lecture time: 3:00PM–7:00PM on-campus and online.</p></div>
+        <div class="announcement-item" style="border-color:var(--green);"><h4>📝 Mock Test – General Knowledge</h4><span>March 28, 2025 | Sir Waleed Fazal</span><p>Monthly mock test for GK on April 3rd at 4:00 PM. It covers Pakistan Affairs, Islamic History, and Current Affairs. Prepare from the notes uploaded in your portal.</p></div>
+        <div class="announcement-item" style="border-color:var(--gold);"><h4>💳 Fee Submission Reminder</h4><span>March 25, 2025 | Admin</span><p>Last date for April batch fee is April 2nd. Bank: HBL | Account: 1234-5678-90 | Account Name: HOPE Preparations.</p></div>
+        <div class="announcement-item" style="border-color:var(--accent);"><h4>📰 Daily Newspaper Routine</h4><span>March 20, 2025 | Admin</span><p>Dawn and The News newspapers are now uploaded daily by 8:00 AM. All students are required to read them and take notes for Current Affairs preparation.</p></div>
+      </div>
+    </div>
+
+    <!-- FEE STATUS -->
+    <div data-tab-content="fee" style="display:none;">
+      <div class="dashboard-section">
+        <h2><i class="fas fa-money-bill-wave" style="color:var(--green);margin-right:8px;"></i>Fee Status</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Month</th><th>Amount</th><th>Course</th><th>Status</th><th>Date Paid</th></tr></thead>
+            <tbody>
+              <tr><td>January 2025</td><td>Rs. 3,500</td><td>One Paper MCQs</td><td><span class="badge badge-green">Paid</span></td><td>Jan 5, 2025</td></tr>
+              <tr><td>February 2025</td><td>Rs. 3,500</td><td>One Paper MCQs</td><td><span class="badge badge-green">Paid</span></td><td>Feb 4, 2025</td></tr>
+              <tr><td>March 2025</td><td>Rs. 3,500</td><td>One Paper MCQs</td><td><span class="badge badge-green">Paid</span></td><td>Mar 3, 2025</td></tr>
+              <tr><td>April 2025</td><td>Rs. 3,500</td><td>One Paper MCQs</td><td><span class="badge badge-red">Pending</span></td><td>Due Apr 2, 2025</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="alert alert-info" style="margin-top:20px;"><i class="fas fa-info-circle"></i> Bank Details: HBL Bank | Account: 1234-5678-90 | Account Name: HOPE Preparations | Contact admin after payment: 0345-7345203</div>
+      </div>
+    </div>
+
+    <!-- PROFILE -->
+    <div data-tab-content="profile" style="display:none;">
+      <div class="dashboard-section">
+        <h2><i class="fas fa-user-circle" style="color:var(--primary);margin-right:8px;"></i>My Profile</h2>
+        <div style="display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:start;">
+          <div style="text-align:center;">
+            <div style="width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-size:3rem;color:white;margin:0 auto 12px;">
+              <i class="fas fa-user"></i>
+            </div>
+            <strong data-user-name style="display:block;font-size:1rem;">Student</strong>
+            <span style="font-size:0.8rem;color:var(--text-muted);" data-user-id></span>
+          </div>
+          <div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+              <div style="background:var(--off-white);padding:16px;border-radius:10px;"><span style="font-size:0.78rem;color:var(--text-muted);font-weight:700;text-transform:uppercase;letter-spacing:1px;">Full Name</span><p style="font-weight:700;margin-top:4px;" data-user-name>—</p></div>
+              <div style="background:var(--off-white);padding:16px;border-radius:10px;"><span style="font-size:0.78rem;color:var(--text-muted);font-weight:700;text-transform:uppercase;letter-spacing:1px;">Student ID</span><p style="font-weight:700;margin-top:4px;" data-user-id>—</p></div>
+              <div style="background:var(--off-white);padding:16px;border-radius:10px;"><span style="font-size:0.78rem;color:var(--text-muted);font-weight:700;text-transform:uppercase;letter-spacing:1px;">Course</span><p style="font-weight:700;margin-top:4px;" data-user-course>—</p></div>
+              <div style="background:var(--off-white);padding:16px;border-radius:10px;"><span style="font-size:0.78rem;color:var(--text-muted);font-weight:700;text-transform:uppercase;letter-spacing:1px;">Batch</span><p style="font-weight:700;margin-top:4px;">2025-A</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="../js/script.js"></script>
+<script>
+  // Wire up tab buttons in sidebar nav
+  document.querySelectorAll('.sidebar-nav a[data-tab]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const tab = link.dataset.tab;
+      document.querySelectorAll('.sidebar-nav a').forEach(a => a.classList.remove('active'));
+      link.classList.add('active');
+      document.querySelectorAll('[data-tab-content]').forEach(c => c.style.display = 'none');
+      const content = document.querySelector(`[data-tab-content="${tab}"]`);
+      if (content) content.style.display = 'block';
+    });
+  });
+  // Start quiz timer
+  setTimeout(() => startQuizTimer(900, 'quizTimer'), 500);
+</script>
+</body>
+</html>

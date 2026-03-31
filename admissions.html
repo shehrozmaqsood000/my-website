@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admissions – HOPE Preparations</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span><i class="fas fa-map-marker-alt"></i> 05-Q Masjid Shuhhada Chowk, Farid Town, Sahiwal</span>
+    <span class="topbar-right"><a href="tel:03457345203"><i class="fas fa-phone"></i> 0345-7345203</a></span>
+  </div>
+</div>
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="../index.html" class="logo-wrap">
+      <img src="../assets/images/logo.png" alt="HOPE Logo" class="logo-img" onerror="this.style.display='none'"/>
+      <div class="logo-text"><span class="logo-main">HOPE</span><span class="logo-sub">PREPARATIONS</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="faculty.html">Faculty</a></li>
+      <li><a href="admissions.html" class="active">Admissions</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="btn-nav-login"><i class="fas fa-user"></i> Login</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <h1>Admissions Open</h1>
+    <p>Apply now for new sessions starting soon – CSS/PMS, FPSC, IELTS, LAT and all courses</p>
+    <div class="breadcrumb"><a href="../index.html">Home</a> <span>/</span> <span>Admissions</span></div>
+  </div>
+</div>
+
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+
+    <!-- Success Message -->
+    <div id="admissionSuccess" style="display:none; text-align:center; padding:60px 20px;">
+      <div style="font-size:4rem; margin-bottom:16px;">🎉</div>
+      <h2 style="font-family:var(--font-display); color:var(--primary); margin-bottom:12px;">Application Submitted!</h2>
+      <p style="font-size:1.05rem; color:var(--text-muted); max-width:500px; margin:0 auto 24px;">Thank you, <strong id="appNameDisplay"></strong>! Your application has been received. Our team will contact you within 24 hours to confirm your enrollment.</p>
+      <p style="color:var(--text-muted); margin-bottom:28px;">For urgent queries, call: <strong>0345-7345203</strong></p>
+      <a href="../index.html" class="btn btn-primary">Back to Home</a>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 360px; gap:40px; align-items:start;" id="admissionContent">
+      <!-- FORM -->
+      <div style="background:white; border-radius:20px; padding:44px; box-shadow:var(--shadow-md);">
+        <h2 style="font-family:var(--font-display); color:var(--text-dark); margin-bottom:8px;">Online Application Form</h2>
+        <p style="color:var(--text-muted); margin-bottom:28px; font-size:0.92rem;">Fill in the form below to apply for admission. All fields marked with * are required.</p>
+        <form id="admissionForm">
+          <div class="form-row">
+            <div class="form-group"><label>Full Name *</label><input type="text" id="appName" placeholder="Your full name" required/></div>
+            <div class="form-group"><label>Father's Name *</label><input type="text" placeholder="Father's full name" required/></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Mobile Number *</label><input type="tel" placeholder="03XX-XXXXXXX" required/></div>
+            <div class="form-group"><label>WhatsApp Number</label><input type="tel" placeholder="If different from mobile"/></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com"/></div>
+            <div class="form-group"><label>CNIC / B-Form</label><input type="text" placeholder="XXXXX-XXXXXXX-X"/></div>
+          </div>
+          <div class="form-group"><label>Course Applying For *</label>
+            <select required>
+              <option value="">-- Select Course --</option>
+              <option>CSS / PMS / PCS</option>
+              <option>FPSC / PPSC / NTS</option>
+              <option>One Paper MCQs</option>
+              <option>IELTS / PTE / Spoken English</option>
+              <option>LAT (Law Admission Test)</option>
+              <option>GAT / GRE</option>
+              <option>PMA / ISSB</option>
+              <option>Computer Sciences (Competitive Exams)</option>
+              <option>Computer Skills & Training</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Preferred Mode *</label>
+              <select required>
+                <option>On-Campus + Online</option>
+                <option>Online Only</option>
+                <option>On-Campus Only</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Qualification</label>
+              <select>
+                <option>Matric</option>
+                <option>Intermediate</option>
+                <option>Bachelor's</option>
+                <option>Master's</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label>City / Area</label><input type="text" placeholder="Your city or area"/></div>
+          <div class="form-group"><label>Previous Exam Attempts (optional)</label><textarea placeholder="Mention any previous attempts at competitive exams..." style="min-height:80px;"></textarea></div>
+          <div class="form-group">
+            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-weight:600;font-size:0.9rem;">
+              <input type="checkbox" required style="width:18px;height:18px;"/> I agree to the terms and conditions of HOPE Preparations
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Submit Application <i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+
+      <!-- SIDEBAR INFO -->
+      <div>
+        <div style="background:linear-gradient(135deg,var(--primary),var(--primary-light)); color:white; border-radius:16px; padding:28px; margin-bottom:20px;">
+          <h3 style="font-family:var(--font-display); margin-bottom:16px;"><i class="fas fa-clock" style="color:var(--gold);margin-right:8px;"></i>Class Timings</h3>
+          <div style="margin-bottom:14px;"><strong>Online (LMS)</strong><br/><span style="opacity:0.85;font-size:0.9rem;">7:00 AM – 3:00 PM Daily</span></div>
+          <div><strong>On-Campus + Online Lectures</strong><br/><span style="opacity:0.85;font-size:0.9rem;">3:00 PM – 7:00 PM Daily</span></div>
+        </div>
+
+        <div style="background:white; border-radius:16px; padding:28px; box-shadow:var(--shadow-sm); margin-bottom:20px;">
+          <h3 style="font-family:var(--font-display); color:var(--text-dark); margin-bottom:16px;">Contact Us</h3>
+          <ul style="display:flex;flex-direction:column;gap:12px;">
+            <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.9rem;"><i class="fas fa-phone" style="color:var(--primary);margin-top:3px;"></i> 0345-7345203</li>
+            <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.9rem;"><i class="fas fa-mobile-alt" style="color:var(--primary);margin-top:3px;"></i> 0321-7345203</li>
+            <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.9rem;"><i class="fas fa-phone-volume" style="color:var(--primary);margin-top:3px;"></i> 040-4555203</li>
+            <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.9rem;"><i class="fas fa-map-marker-alt" style="color:var(--accent);margin-top:3px;"></i> 05-Q Masjid Shuhhada Chowk, Farid Town, Sahiwal</li>
+          </ul>
+        </div>
+
+        <div style="background:var(--accent); color:white; border-radius:16px; padding:28px; text-align:center;">
+          <div style="font-size:2.5rem; margin-bottom:10px;">🎓</div>
+          <h3 style="font-family:var(--font-display); margin-bottom:8px;">Free Demo Class</h3>
+          <p style="opacity:0.9; font-size:0.88rem; margin-bottom:16px;">Attend a free demo class before enrolling. No commitment required!</p>
+          <a href="contact.html" class="btn btn-white btn-sm">Request Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-bottom"><div class="container"><p>© 2025 HOPE Preparations – House of Progressive Education.</p></div></div>
+</footer>
+<button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Schedule – HOPE Preparations</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+.timetable { width:100%; border-collapse:collapse; margin-bottom:32px; background:white; border-radius:16px; overflow:hidden; box-shadow:var(--shadow-md); }
+.timetable th { background:var(--primary); color:white; padding:15px 18px; text-align:left; font-size:0.88rem; font-weight:800; letter-spacing:0.5px; }
+.timetable td { padding:14px 18px; border-bottom:1px solid var(--light-gray); font-size:0.9rem; vertical-align:middle; }
+.timetable tr:last-child td { border-bottom:none; }
+.timetable tr:hover td { background:var(--off-white); }
+.timetable .subject-cell { font-weight:700; color:var(--text-dark); }
+.timetable .teacher-cell { color:var(--primary); font-weight:600; }
+.time-pill { background:linear-gradient(135deg,var(--primary),var(--primary-light)); color:white; padding:5px 13px; border-radius:50px; font-size:0.78rem; font-weight:800; white-space:nowrap; display:inline-block; }
+.time-pill.eve { background:linear-gradient(135deg,var(--accent),#e55555); }
+.schedule-tabs { display:flex; gap:0; border-radius:12px; overflow:hidden; border:2px solid var(--light-gray); margin-bottom:32px; }
+.sch-tab { flex:1; padding:13px; text-align:center; font-weight:700; font-size:0.9rem; cursor:pointer; transition:var(--transition); color:var(--text-muted); background:transparent; border:none; font-family:var(--font-body); }
+.sch-tab.active { background:var(--primary); color:white; }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span><i class="fas fa-map-marker-alt"></i> 05-Q Masjid Shuhhada Chowk, Farid Town, Sahiwal</span>
+    <span class="topbar-right"><a href="tel:03457345203"><i class="fas fa-phone"></i> 0345-7345203</a><a href="tel:03217345203"><i class="fas fa-mobile-alt"></i> 0321-7345203</a></span>
+  </div>
+</div>
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="../index.html" class="logo-wrap">
+      <img src="../assets/images/logo.png" alt="Logo" class="logo-img" onerror="this.style.display='none'"/>
+      <div class="logo-text"><span class="logo-main">HOPE</span><span class="logo-sub">PREPARATIONS</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="faculty.html">Faculty</a></li>
+      <li><a href="schedule.html" class="active">Schedule</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="btn-nav-login"><i class="fas fa-user"></i> Login</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <h1>Class Schedule</h1>
+    <p>Daily timetable for all courses – on-campus and online sessions</p>
+    <div class="breadcrumb"><a href="../index.html">Home</a> <span>/</span> <span>Schedule</span></div>
+  </div>
+</div>
+
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+
+    <!-- Timing Overview Cards -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:48px;">
+      <div class="schedule-card online" style="background:white;border-radius:16px;padding:32px;border-top:5px solid var(--primary);box-shadow:var(--shadow-md);">
+        <div style="width:56px;height:56px;border-radius:14px;background:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:white;margin-bottom:18px;"><i class="fas fa-laptop"></i></div>
+        <h3 style="font-family:var(--font-display);color:var(--text-dark);margin-bottom:8px;">Online Preparation (LMS)</h3>
+        <div style="font-size:1.6rem;font-weight:900;color:var(--primary);margin-bottom:12px;"><i class="fas fa-sun" style="font-size:1rem;margin-right:8px;"></i>7:00 AM – 3:00 PM</div>
+        <p style="font-size:0.9rem;color:var(--text-muted);">Daily online sessions via LMS platform. Access notes, newspapers, quizzes and recorded lectures from anywhere. Google Meet live sessions included.</p>
+      </div>
+      <div class="schedule-card oncampus" style="background:white;border-radius:16px;padding:32px;border-top:5px solid var(--accent);box-shadow:var(--shadow-md);">
+        <div style="width:56px;height:56px;border-radius:14px;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:white;margin-bottom:18px;"><i class="fas fa-school"></i></div>
+        <h3 style="font-family:var(--font-display);color:var(--text-dark);margin-bottom:8px;">On-Campus & Online Lectures</h3>
+        <div style="font-size:1.6rem;font-weight:900;color:var(--accent);margin-bottom:12px;"><i class="fas fa-moon" style="font-size:1rem;margin-right:8px;"></i>3:00 PM – 7:00 PM</div>
+        <p style="font-size:0.9rem;color:var(--text-muted);">Daily on-campus lectures with expert faculty simultaneously broadcast online. Interactive sessions, assessments, and Q&A included.</p>
+      </div>
+    </div>
+
+    <!-- Course-wise Tabs -->
+    <div class="section-header" style="margin-bottom:28px;">
+      <span class="section-tag">Timetable</span>
+      <h2>Daily Class Schedule</h2>
+    </div>
+    <div class="schedule-tabs">
+      <button class="sch-tab active" onclick="showTab('css')">CSS / PMS</button>
+      <button class="sch-tab" onclick="showTab('fpsc')">FPSC / PPSC</button>
+      <button class="sch-tab" onclick="showTab('onepaper')">One Paper</button>
+      <button class="sch-tab" onclick="showTab('ielts')">IELTS</button>
+      <button class="sch-tab" onclick="showTab('computer')">Computer</button>
+    </div>
+
+    <div id="tab-css">
+      <h3 style="font-family:var(--font-display);color:var(--text-dark);margin-bottom:16px;">CSS / PMS / PCS – Daily Timetable</h3>
+      <table class="timetable">
+        <thead><tr><th>Time</th><th>Subject</th><th>Teacher</th><th>Mode</th><th>Days</th></tr></thead>
+        <tbody>
+          <tr><td><span class="time-pill">7:00 – 9:00 AM</span></td><td class="subject-cell">Current Affairs (Newspaper Discussion)</td><td class="teacher-cell">Sir Waleed Fazal</td><td><span class="badge badge-blue">Online LMS</span></td><td>Mon – Sat</td></tr>
+          <tr><td><span class="time-pill">9:00 – 11:00 AM</span></td><td class="subject-cell">Pakistan Affairs</td><td class="teacher-cell">Sir Waleed Fazal</td><td><span class="badge badge-blue">Online LMS</span></td><td>Mon – Sat</td></tr>
+          <tr><td><span class="time-pill">11:00 AM – 1:00 PM</span></td><td class="subject-cell">General Knowledge</td><td class="teacher-cell">Sir Waleed Fazal</td><td><span class="badge badge-blue">Online LMS</span></td><td>Mon – Sat</td></tr>
+          <tr><td><span class="time-pill">1:00 – 3:00 PM</span></td><td class="subject-cell">Essay Writing & English</td><td class="teacher-cell">Sir Akmal Zia</td><td><span class="badge badge-blue">Online LMS</span></td><td>Mon – Sat</td></tr>
+          <tr><td><span class="time-pill eve">3:00 – 5:00 PM</span></td><td class="subject-cell">General Knowledge (Lecture)</td><td class="teacher-cell">Sir Waleed Fazal</td><td><span class="badge badge-gold">On-Campus + Online</span></td><td>Mon – Sat</td></tr>
+          <tr><td><span class="time-pill eve">5:00 – 7:00 PM</span></td><td class="subject-cell">Mathematics / Everyday Sciences</td><td class="teacher-cell">Sir Manzoor Ishaq / Asim Shabir</td><td><span class="badge badge-gold">On-Campus + Online</span></td><td>Mon – Sat</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="tab-fpsc" style="display:none;">
+      <h3 style="font-family:var(--font-display);color:var(--text-dark);margin-bottom:16px;">FPSC / PPSC / NTS – Daily Timetable</h3>
+      <table class="timetable">
+        <thead><tr><th>Time</th><th>Subject</th><th>Teacher</th><th>Mode</th><th>Days</th></tr></thead>
+        <tbody>
+          <tr><td><span class="time-pill">7:00 – 9:00 AM</span></td><td class="subject-cell">Current Affairs + Newspaper</td><td class="teacher-cell">Sir Waleed Fazal</td><td><span class="badge badge-blue">Online LMS</span></td><td>Mon – Sat</td></tr>
+          <tr><td><span class="time-pill">9:00 – 11:00 AM</span></td><td class="subject-cell">General Knowledge MCQs</td><td class="teacher-cell">Sir Waleed Fazal</td><td><span class="badge badge-blue">Online LMS</span></td><td>Mon – Sat</td></tr>
+          <tr><td><span class="time-pill">11:00 AM – 1:00 PM</span></td><td class="subject-cell">Computer Sciences</td><td class="teacher-cell">Sir Muhammad Amir</td><td><span class="badge badge-blue">Online LMS</span></td><td>Mon – Fri</td></tr>
+          <tr><td><span class="time-pill eve">3:00 – 5:00 PM</span></td><td class="subject-cell">Pakistan Affairs + Islamic Studies</td><td class="teacher-cell">Sir Waleed Fazal</td><td><span class="badge badge-gold">On-Campus + Online</span></td><td>Mon – Sat</td></tr>
+          <tr><td><span class="time-pill eve">5:00 – 7:00 PM</span></td><td class="subject-cell">Mathematics + English MCQs</td><td class="teacher-cell">Sir Manzoor Ishaq</td><td><span class="badge badge-gold">On-Campus + Online</span></td><td>Mon – Sat</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="tab-onepaper" style="display:none;">
+      <h3 style="font-family:var(--font-display);color:var(--text-dark);margin-bottom:16px;">One Paper MCQs – Daily Timetable</h3>
+      <table class="timetable">
+        <thead><tr><th>Time</th><th>Subject</th><th>Teacher</th><th>Mode</th><th>Days</th></tr></thead>
+        <tbody>
+          <tr><td><span class="time-pill">7:00 – 9:00 AM</span></td><td class="subject-cell">Current Affairs (Daily Newspaper)</td><td class="teacher-cell">All Faculty</td><td><span class="badge badge-blue">Online LMS</span></td><td>Mon – Sat</td></tr>
+          <tr><td><span class="time-pill">9:00 – 11:00 AM</span></td><td class="subject-cell">Pakistan Affairs / Islamic History</td><td class="teacher-cell">Sir Waleed Fazal</td><td><span class="badge badge-blue">Online LMS</span></td><td>Mon – Sat</td></tr>
+          <tr><td><span class="time-pill">11:00 AM – 1:00 PM</span></td><td class="subject-cell">Mathematics / Computer</td><td class="teacher-cell">Sir Manzoor / Sir Amir</td><td><span class="badge badge-blue">Online LMS</span></td><td>Mon – Sat</td></tr>
+          <tr><td><span class="time-pill eve">3:00 – 5:00 PM</span></td><td class="subject-cell">GK / Everyday Sciences</td><td class="teacher-cell">Asim Shabir</td><td><span class="badge badge-gold">On-Campus + Online</span></td><td>Mon – Sat</td></tr>
+          <tr><td><span class="time-pill eve">5:00 – 7:00 PM</span></td><td class="subject-cell">Urdu / English / Mock Test</td><td class="teacher-cell">Sir Akmal Zia</td><td><span class="badge badge-gold">On-Campus + Online</span></td><td>Mon – Sat</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="tab-ielts" style="display:none;">
+      <h3 style="font-family:var(--font-display);color:var(--text-dark);margin-bottom:16px;">IELTS / PTE / Spoken English – Daily Timetable</h3>
+      <table class="timetable">
+        <thead><tr><th>Time</th><th>Module</th><th>Teacher</th><th>Mode</th><th>Days</th></tr></thead>
+        <tbody>
+          <tr><td><span class="time-pill">7:00 – 9:00 AM</span></td><td class="subject-cell">Listening + Reading Practice</td><td class="teacher-cell">Sir Akmal Zia</td><td><span class="badge badge-blue">Online LMS</span></td><td>Mon – Sat</td></tr>
+          <tr><td><span class="time-pill">9:00 – 11:00 AM</span></td><td class="subject-cell">Writing Task 1 & 2</td><td class="teacher-cell">Sir Akmal Zia</td><td><span class="badge badge-blue">Online LMS</span></td><td>Mon – Sat</td></tr>
+          <tr><td><span class="time-pill eve">3:00 – 5:00 PM</span></td><td class="subject-cell">Speaking Practice + Vocabulary</td><td class="teacher-cell">Sir Akmal Zia</td><td><span class="badge badge-gold">On-Campus + Online</span></td><td>Mon – Fri</td></tr>
+          <tr><td><span class="time-pill eve">5:00 – 7:00 PM</span></td><td class="subject-cell">Mock Test / SAT Prep</td><td class="teacher-cell">Sir Akmal Zia</td><td><span class="badge badge-gold">On-Campus + Online</span></td><td>Sat</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="tab-computer" style="display:none;">
+      <h3 style="font-family:var(--font-display);color:var(--text-dark);margin-bottom:16px;">Computer Sciences & Training – Daily Timetable</h3>
+      <table class="timetable">
+        <thead><tr><th>Time</th><th>Topic</th><th>Teacher</th><th>Mode</th><th>Days</th></tr></thead>
+        <tbody>
+          <tr><td><span class="time-pill">9:00 – 11:00 AM</span></td><td class="subject-cell">Computer Sciences for CSS/PMS MCQs</td><td class="teacher-cell">Sir Muhammad Amir</td><td><span class="badge badge-blue">Online LMS</span></td><td>Mon – Fri</td></tr>
+          <tr><td><span class="time-pill eve">3:00 – 5:00 PM</span></td><td class="subject-cell">Computer Skills (MS Office, Internet)</td><td class="teacher-cell">Sir Babar Ali</td><td><span class="badge badge-gold">On-Campus + Online</span></td><td>Mon – Sat</td></tr>
+          <tr><td><span class="time-pill eve">5:00 – 7:00 PM</span></td><td class="subject-cell">Advanced IT Training / Practicals</td><td class="teacher-cell">Sir Babar Ali</td><td><span class="badge badge-gold">On-Campus + Online</span></td><td>Mon – Fri</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Weekly Overview -->
+    <div style="background:white;border-radius:16px;padding:32px;box-shadow:var(--shadow-md);margin-top:20px;">
+      <h3 style="font-family:var(--font-display);color:var(--text-dark);margin-bottom:20px;"><i class="fas fa-calendar-week" style="color:var(--primary);margin-right:10px;"></i>Weekly Special Sessions</h3>
+      <table class="timetable" style="box-shadow:none;border-radius:0;">
+        <thead><tr><th>Day</th><th>Special Activity</th><th>Time</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Every Saturday</strong></td><td>Weekly Mock Test (All Subjects)</td><td>3:00 PM – 5:00 PM</td></tr>
+          <tr><td><strong>Every Sunday</strong></td><td>Result Discussion + Weak Areas Review</td><td>3:00 PM – 5:00 PM</td></tr>
+          <tr><td><strong>1st of Month</strong></td><td>Monthly Mock Test + Assessment</td><td>Full Day</td></tr>
+          <tr><td><strong>Daily (8AM)</strong></td><td>Dawn / The News Newspaper Uploaded on LMS</td><td>8:00 AM</td></tr>
+          <tr><td><strong>Daily (7PM)</strong></td><td>Evening Q&A Session on Google Meet</td><td>7:00 PM</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section cta-section">
+  <div class="container"><div class="cta-card"><div class="cta-text"><h2>Want to Join This Schedule?</h2><p>Enroll now to get access to both online LMS and on-campus classes.</p></div><div class="cta-actions"><a href="admissions.html" class="btn btn-white">Apply Now</a><a href="contact.html" class="btn btn-outline-white">Contact Us</a></div></div></div>
+</section>
+
+<footer class="footer"><div class="footer-bottom"><div class="container"><p>© 2025 HOPE Preparations – House of Progressive Education.</p></div></div></footer>
+<button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+<script src="../js/script.js"></script>
+<script>
+function showTab(tab) {
+  ['css','fpsc','onepaper','ielts','computer'].forEach(t => {
+    document.getElementById('tab-'+t).style.display = t === tab ? 'block' : 'none';
+  });
+  document.querySelectorAll('.sch-tab').forEach((btn,i) => {
+    btn.classList.toggle('active', ['css','fpsc','onepaper','ielts','computer'][i] === tab);
+  });
+}
+</script>
+</body>
+</html>

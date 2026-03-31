@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Login – HOPE Preparations</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+<div class="auth-page" style="background: linear-gradient(135deg,#1a0a2e 0%,#002868 50%,#c8282d 100%);">
+  <div class="auth-card">
+    <div class="auth-logo">
+      <img src="../assets/images/logo.png" alt="HOPE Logo" onerror="this.style.display='none'"/>
+      <h1>Admin Panel</h1>
+      <p>HOPE Preparations – Administration</p>
+    </div>
+    <div class="alert alert-info" style="font-size:0.82rem;"><i class="fas fa-shield-alt"></i> Restricted Area – Authorized Personnel Only</div>
+    <div id="loginMsg" class="alert" style="display:none;"></div>
+    <form id="loginForm" data-type="admin">
+      <div class="form-group">
+        <label for="loginUsername"><i class="fas fa-user-shield"></i> Admin Username</label>
+        <input type="text" id="loginUsername" placeholder="Admin username" required/>
+      </div>
+      <div class="form-group">
+        <label for="loginPassword"><i class="fas fa-key"></i> Password</label>
+        <input type="password" id="loginPassword" placeholder="Admin password" required/>
+      </div>
+      <button type="submit" class="btn btn-secondary" style="width:100%; margin-top:8px;">Admin Login <i class="fas fa-sign-in-alt"></i></button>
+    </form>
+    <p style="text-align:center; margin-top:16px; font-size:0.82rem; color:var(--text-muted);">
+      <strong>Demo:</strong> username: <code>admin</code> | password: <code>hopeadmin2025</code>
+    </p>
+    <p style="text-align:center; margin-top:16px;"><a href="../index.html" style="color:var(--accent); font-size:0.85rem;"><i class="fas fa-arrow-left"></i> Back to Website</a></p>
+  </div>
+</div>
+<script src="../js/script.js"></script>
+</body>
+</html>

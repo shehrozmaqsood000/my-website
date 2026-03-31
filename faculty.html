@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Faculty – HOPE Preparations</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+.faculty-full-card { background:white; border-radius:20px; overflow:hidden; box-shadow:var(--shadow-md); border:1px solid var(--light-gray); display:grid; grid-template-columns:280px 1fr; margin-bottom:32px; transition:var(--transition); }
+.faculty-full-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-4px); }
+.faculty-full-img { overflow:hidden; }
+.faculty-full-img img { width:100%; height:100%; object-fit:cover; object-position:top; }
+.faculty-full-info { padding:36px; }
+.faculty-full-info h2 { font-family:var(--font-display); font-size:1.6rem; color:var(--text-dark); margin-bottom:6px; }
+.faculty-creds { display:flex; flex-direction:column; gap:9px; margin:18px 0; }
+.faculty-cred { display:flex; gap:10px; font-size:0.9rem; color:var(--text-body); }
+.faculty-cred i { color:var(--green); margin-top:3px; flex-shrink:0; }
+.faculty-subjects-list { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+@media(max-width:768px){ .faculty-full-card{ grid-template-columns:1fr; } .faculty-full-img{ height:260px; } }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span><i class="fas fa-map-marker-alt"></i> 05-Q Masjid Shuhhada Chowk, Farid Town, Sahiwal</span>
+    <span class="topbar-right"><a href="tel:03457345203"><i class="fas fa-phone"></i> 0345-7345203</a></span>
+  </div>
+</div>
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="../index.html" class="logo-wrap">
+      <img src="../assets/images/logo.png" alt="Logo" class="logo-img" onerror="this.style.display='none'"/>
+      <div class="logo-text"><span class="logo-main">HOPE</span><span class="logo-sub">PREPARATIONS</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="faculty.html" class="active">Faculty</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="btn-nav-login"><i class="fas fa-user"></i> Login</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <h1>Our Expert Faculty</h1>
+    <p>Learn from experienced government servants, subject specialists and certified trainers</p>
+    <div class="breadcrumb"><a href="../index.html">Home</a> <span>/</span> <span>Faculty</span></div>
+  </div>
+</div>
+
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+
+    <!-- Director -->
+    <div class="faculty-full-card">
+      <div class="faculty-full-img"><img src="../assets/images/director2.jpg" alt="Asif Naveed – Director"/></div>
+      <div class="faculty-full-info">
+        <span class="faculty-subject" style="margin-bottom:10px;">Director & Founder</span>
+        <h2>Asif Naveed</h2>
+        <p style="color:var(--text-muted);font-size:0.93rem;">Founder and Director of HOPE Preparations – House of Progressive Education, Sahiwal. Dedicated to providing the highest standard of competitive exam coaching to aspirants across Pakistan.</p>
+        <div class="faculty-creds">
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> Founder of HOPE Preparations (House of Progressive Education)</div>
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> 7+ years of experience in competitive exam coaching industry</div>
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> Vision to provide quality education to aspirants from Sahiwal and beyond</div>
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> Both on-campus and online learning management system operator</div>
+        </div>
+        <div class="faculty-subjects-list">
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">Academy Management</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">Career Guidance</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">Student Counseling</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Akmal Zia -->
+    <div class="faculty-full-card">
+      <div class="faculty-full-img"><img src="../assets/images/teacher-ielts.jpg" alt="Sir Akmal Zia"/></div>
+      <div class="faculty-full-info">
+        <span class="faculty-subject">IELTS / PTE / Spoken English</span>
+        <h2>Sir. Akmal Zia</h2>
+        <div class="faculty-creds">
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> EST English (BPS-15) in the Department of School Education, Govt. of Punjab</div>
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> Certified Expert English Trainer from British Council</div>
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> M.Phil Linguistics (English) from University of Sargodha (UoSwl)</div>
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> More than 10 years of mentoring experience for IELTS and Spoken English</div>
+        </div>
+        <div class="faculty-subjects-list">
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">IELTS Academic</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">IELTS General</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">UKVI</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">PTE</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">Spoken English</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Asim Shabir -->
+    <div class="faculty-full-card">
+      <div class="faculty-full-img"><img src="../assets/images/teacher-science.jpg" alt="Asim Shabir"/></div>
+      <div class="faculty-full-info">
+        <span class="faculty-subject">Everyday Sciences</span>
+        <h2>Asim Shabir</h2>
+        <div class="faculty-creds">
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> Enumerator for PSER, Urban Unit, Govt. of Punjab</div>
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> MSc. Zoology from Government College University Faisalabad (GCUF)</div>
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> Qualified Pakistan Civil Services (PSC) Examinations</div>
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> More than 2 years mentoring experience to aspirants for competitive and academic exams</div>
+        </div>
+        <div class="faculty-subjects-list">
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">Everyday Sciences</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">Biology</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">CSS/PMS/PCS</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">FPSC/PPSC</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Muhammad Amir -->
+    <div class="faculty-full-card">
+      <div class="faculty-full-img"><img src="../assets/images/teacher-computer.jpg" alt="Sir Muhammad Amir"/></div>
+      <div class="faculty-full-info">
+        <span class="faculty-subject">Computer Sciences</span>
+        <h2>Sir. Muhammad Amir</h2>
+        <div class="faculty-creds">
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> Subject Specialist (BPS-17) in Computer Sciences & I.T</div>
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> More than 10 years of mentoring experience to teach aspirants for competitive exams</div>
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> Expert in CSS, PCS, PMS, One Paper MCQs Computer subjects</div>
+        </div>
+        <div class="faculty-subjects-list">
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">Computer Sciences</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">I.T</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">CSS/PCS/PMS</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">One Paper MCQs</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Babar Ali -->
+    <div class="faculty-full-card">
+      <div class="faculty-full-img"><img src="../assets/images/teacher-cs-skills.jpg" alt="Sir Babar Ali"/></div>
+      <div class="faculty-full-info">
+        <span class="faculty-subject">Computer Skills & Training</span>
+        <h2>Sir. Babar Ali</h2>
+        <div class="faculty-creds">
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> Instructor / Institute Placement Officer (BPS-14) in TEVTA, Sahiwal</div>
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> PhD Scholar (Management Sciences) from University of Sargodha (UoSwl)</div>
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> Member of Curriculum, TLM & TLG development committee TEVTA, Punjab</div>
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> More than 10 years of experience in Mentorship and Career Guidance</div>
+        </div>
+        <div class="faculty-subjects-list">
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">Computer Skills</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">MS Office</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">IT Training</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">Career Guidance</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Waleed Fazal -->
+    <div class="faculty-full-card">
+      <div class="faculty-full-img"><img src="../assets/images/teacher-gk.jpg" alt="Sir M. Waleed Fazal"/></div>
+      <div class="faculty-full-info">
+        <span class="faculty-subject">General Knowledge</span>
+        <h2>Sir. M. Waleed Fazal</h2>
+        <div class="faculty-creds">
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> Crime Scene Inspector (BS-17) PFSA, HOME Department, Govt. of Punjab</div>
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> More than 10 years mentoring experience to aspirants of competitive examinations</div>
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> Specialist in PCS/CSS/PMS and all competitive exam General Knowledge</div>
+        </div>
+        <div class="faculty-subjects-list">
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">General Knowledge</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">Pakistan Affairs</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">Current Affairs</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">PCS/CSS/PMS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Manzoor Ishaq -->
+    <div class="faculty-full-card">
+      <div class="faculty-full-img"><img src="../assets/images/teacher-math.jpg" alt="Sir Manzoor Ishaq"/></div>
+      <div class="faculty-full-info">
+        <span class="faculty-subject">Mathematics</span>
+        <h2>Sir. Manzoor Ishaq</h2>
+        <div class="faculty-creds">
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> Lecturer Mathematics at Government College University Faisalabad (GCUF), Sahiwal</div>
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> PhD Scholar in Mathematics from GCUF</div>
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> More than 5 years mentoring experience to aspirants for competitive exams</div>
+          <div class="faculty-cred"><i class="fas fa-check-circle"></i> Specialist in ESE (Math), Lecturer (Math), PCS/CSS/PMS preparations</div>
+        </div>
+        <div class="faculty-subjects-list">
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">Mathematics</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">ESE (Math)</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">Lecturer Math</span>
+          <span class="subject-pill" style="font-size:0.78rem;padding:6px 13px;">CSS/PMS</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section cta-section">
+  <div class="container"><div class="cta-card"><div class="cta-text"><h2>Want to Learn from the Best?</h2><p>Enroll now and get mentored by Pakistan's finest educators and government servants.</p></div><div class="cta-actions"><a href="admissions.html" class="btn btn-white">Apply Now</a><a href="contact.html" class="btn btn-outline-white">Contact Us</a></div></div></div>
+</section>
+<footer class="footer"><div class="footer-bottom"><div class="container"><p>© 2025 HOPE Preparations – House of Progressive Education.</p></div></div></footer>
+<button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+<script src="../js/script.js"></script>
+</body>
+</html>

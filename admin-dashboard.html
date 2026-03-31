@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard – HOPE Preparations</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+.tab-nav { display:flex;gap:0;border-radius:12px;overflow:hidden;border:2px solid var(--light-gray);margin-bottom:28px;flex-wrap:wrap; }
+.tab-btn { padding:12px 20px;font-weight:700;font-size:0.85rem;cursor:pointer;transition:var(--transition);color:var(--text-muted);background:transparent;border:none;font-family:var(--font-body); }
+.tab-btn.active { background:var(--primary);color:white; }
+[data-tab-content] { display:none; }
+</style>
+</head>
+<body>
+<div id="adminDashboard" class="dashboard-layout">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <img src="../assets/images/logo.png" alt="Logo" style="height:34px;" onerror="this.style.display='none'"/>
+        <span>HOPE Admin</span>
+      </div>
+    </div>
+    <div class="sidebar-user">
+      <div class="user-name" data-user-name>Admin</div>
+      <div class="user-role">Administration Panel</div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-section-label">Dashboard</div>
+      <a href="#" data-tab="overview" class="active"><i class="fas fa-tachometer-alt"></i> Overview</a>
+      <div class="sidebar-section-label">Manage</div>
+      <a href="#" data-tab="students"><i class="fas fa-users"></i> Students</a>
+      <a href="#" data-tab="enrollment"><i class="fas fa-user-plus"></i> Enrollment</a>
+      <a href="#" data-tab="fee-management"><i class="fas fa-money-bill-wave"></i> Fee Management</a>
+      <div class="sidebar-section-label">Content</div>
+      <a href="#" data-tab="upload-notes"><i class="fas fa-upload"></i> Upload Notes</a>
+      <a href="#" data-tab="upload-newspaper"><i class="fas fa-newspaper"></i> Upload Newspaper</a>
+      <a href="#" data-tab="announcements"><i class="fas fa-bullhorn"></i> Announcements</a>
+      <a href="#" data-tab="schedule"><i class="fas fa-calendar-alt"></i> Schedule</a>
+      <div class="sidebar-section-label">Account</div>
+      <a href="../../index.html"><i class="fas fa-globe"></i> View Website</a>
+      <a href="#" data-action="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="dashboard-main">
+    <div class="dashboard-header">
+      <h1>Admin Dashboard</h1>
+      <p>Welcome back, <strong data-user-name>Admin</strong> – Manage HOPE Preparations from here.</p>
+    </div>
+
+    <!-- OVERVIEW -->
+    <div data-tab-content="overview" style="display:block;">
+      <div class="dashboard-cards">
+        <div class="dash-card blue"><div class="dc-icon">👨‍🎓</div><div class="dc-num">247</div><div class="dc-label">Total Students</div></div>
+        <div class="dash-card green"><div class="dc-icon">✅</div><div class="dc-num">198</div><div class="dc-label">Active Enrollments</div></div>
+        <div class="dash-card gold"><div class="dc-icon">💰</div><div class="dc-num">Rs.863K</div><div class="dc-label">Monthly Revenue</div></div>
+        <div class="dash-card red"><div class="dc-icon">⚠️</div><div class="dc-num">49</div><div class="dc-label">Fee Pending</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+        <div class="dashboard-section">
+          <h2>Recent Enrollments</h2>
+          <table>
+            <thead><tr><th>Name</th><th>Course</th><th>Date</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>Sara Malik</td><td>CSS/PMS</td><td>Mar 30</td><td><span class="badge badge-green">Active</span></td></tr>
+              <tr><td>Usman Tariq</td><td>IELTS</td><td>Mar 29</td><td><span class="badge badge-green">Active</span></td></tr>
+              <tr><td>Fatima Khan</td><td>One Paper</td><td>Mar 28</td><td><span class="badge badge-blue">Pending</span></td></tr>
+              <tr><td>Hassan Raza</td><td>FPSC/PPSC</td><td>Mar 27</td><td><span class="badge badge-green">Active</span></td></tr>
+              <tr><td>Zainab Noor</td><td>Computer</td><td>Mar 26</td><td><span class="badge badge-gold">Trial</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="dashboard-section">
+          <h2>Fee Overview – April 2025</h2>
+          <table>
+            <thead><tr><th>Course</th><th>Enrolled</th><th>Paid</th><th>Pending</th></tr></thead>
+            <tbody>
+              <tr><td>CSS/PMS</td><td>45</td><td>38</td><td><span class="badge badge-red">7</span></td></tr>
+              <tr><td>FPSC/PPSC</td><td>62</td><td>55</td><td><span class="badge badge-red">7</span></td></tr>
+              <tr><td>IELTS</td><td>38</td><td>32</td><td><span class="badge badge-red">6</span></td></tr>
+              <tr><td>One Paper</td><td>71</td><td>58</td><td><span class="badge badge-red">13</span></td></tr>
+              <tr><td>Computer</td><td>31</td><td>15</td><td><span class="badge badge-red">16</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- STUDENTS -->
+    <div data-tab-content="students">
+      <div class="dashboard-section">
+        <h2>All Students</h2>
+        <div style="display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap;">
+          <input type="text" placeholder="🔍 Search students..." style="flex:1;min-width:200px;padding:11px 15px;border:2px solid var(--light-gray);border-radius:8px;font-size:0.88rem;outline:none;font-family:var(--font-body);"/>
+          <select style="padding:11px 15px;border:2px solid var(--light-gray);border-radius:8px;font-size:0.88rem;outline:none;font-family:var(--font-body);">
+            <option>All Courses</option><option>CSS/PMS</option><option>FPSC/PPSC</option><option>IELTS</option><option>One Paper</option><option>Computer</option>
+          </select>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>ID</th><th>Name</th><th>Course</th><th>Batch</th><th>Fee</th><th>Status</th><th>Action</th></tr></thead>
+            <tbody>
+              <tr><td>STU001</td><td>Ali Hassan</td><td>CSS/PMS</td><td>2025-A</td><td><span class="badge badge-green">Paid</span></td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
+              <tr><td>STU002</td><td>Ahmed Raza</td><td>FPSC/PPSC</td><td>2025-B</td><td><span class="badge badge-red">Pending</span></td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
+              <tr><td>STU003</td><td>Sara Malik</td><td>CSS/PMS</td><td>2025-A</td><td><span class="badge badge-green">Paid</span></td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
+              <tr><td>STU004</td><td>Usman Tariq</td><td>IELTS</td><td>2025-B</td><td><span class="badge badge-green">Paid</span></td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
+              <tr><td>STU005</td><td>Fatima Khan</td><td>One Paper</td><td>2025-A</td><td><span class="badge badge-gold">Partial</span></td><td><span class="badge badge-blue">Probation</span></td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ENROLLMENT -->
+    <div data-tab-content="enrollment">
+      <div class="dashboard-section">
+        <h2>Add New Student Enrollment</h2>
+        <div id="enrollMsg" class="alert" style="display:none;"></div>
+        <form id="enrollForm" onsubmit="event.preventDefault(); showAlert('enrollMsg','Student enrolled successfully!','success'); this.reset();">
+          <div class="form-row">
+            <div class="form-group"><label>Full Name</label><input type="text" placeholder="Student full name" required/></div>
+            <div class="form-group"><label>Father's Name</label><input type="text" placeholder="Father's name" required/></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Phone</label><input type="tel" placeholder="03XX-XXXXXXX" required/></div>
+            <div class="form-group"><label>CNIC</label><input type="text" placeholder="XXXXX-XXXXXXX-X"/></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Course</label><select required><option value="">Select Course</option><option>CSS/PMS/PCS</option><option>FPSC/PPSC/NTS</option><option>One Paper MCQs</option><option>IELTS/PTE/Spoken English</option><option>LAT/GAT</option><option>Computer Sciences</option></select></div>
+            <div class="form-group"><label>Batch</label><select><option>2025-A</option><option>2025-B</option><option>2025-C</option></select></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Username (for portal)</label><input type="text" placeholder="Create a username" required/></div>
+            <div class="form-group"><label>Password</label><input type="text" placeholder="Set a password" required/></div>
+          </div>
+          <div class="form-group"><label>Fee Amount</label><input type="number" placeholder="Monthly fee in PKR" required/></div>
+          <button type="submit" class="btn btn-primary">Enroll Student <i class="fas fa-user-plus"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <!-- FEE MANAGEMENT -->
+    <div data-tab-content="fee-management">
+      <div class="dashboard-section">
+        <h2>Fee Management</h2>
+        <div style="display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap;">
+          <select style="padding:11px 15px;border:2px solid var(--light-gray);border-radius:8px;font-size:0.88rem;outline:none;font-family:var(--font-body);">
+            <option>April 2025</option><option>March 2025</option><option>February 2025</option>
+          </select>
+          <select style="padding:11px 15px;border:2px solid var(--light-gray);border-radius:8px;font-size:0.88rem;outline:none;font-family:var(--font-body);">
+            <option>All Courses</option><option>CSS/PMS</option><option>FPSC/PPSC</option><option>IELTS</option>
+          </select>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Student</th><th>Course</th><th>Fee</th><th>Month</th><th>Status</th><th>Mark Paid</th></tr></thead>
+            <tbody>
+              <tr><td>Ahmed Raza</td><td>FPSC/PPSC</td><td>Rs. 3,500</td><td>Apr 2025</td><td><span class="badge badge-red">Pending</span></td><td><button class="btn btn-sm btn-primary" onclick="this.closest('tr').querySelector('.badge').className='badge badge-green'; this.closest('tr').querySelector('.badge').textContent='Paid'; this.remove();">Mark Paid</button></td></tr>
+              <tr><td>Fatima Khan</td><td>One Paper</td><td>Rs. 3,000</td><td>Apr 2025</td><td><span class="badge badge-red">Pending</span></td><td><button class="btn btn-sm btn-primary" onclick="this.closest('tr').querySelector('.badge').className='badge badge-green'; this.closest('tr').querySelector('.badge').textContent='Paid'; this.remove();">Mark Paid</button></td></tr>
+              <tr><td>Zainab Noor</td><td>Computer</td><td>Rs. 4,000</td><td>Apr 2025</td><td><span class="badge badge-red">Pending</span></td><td><button class="btn btn-sm btn-primary" onclick="this.closest('tr').querySelector('.badge').className='badge badge-green'; this.closest('tr').querySelector('.badge').textContent='Paid'; this.remove();">Mark Paid</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- UPLOAD NOTES -->
+    <div data-tab-content="upload-notes">
+      <div class="dashboard-section">
+        <h2>Upload Study Notes / Materials</h2>
+        <div id="noteUploadMsg" class="alert" style="display:none;"></div>
+        <form id="uploadNoteForm">
+          <div class="form-row">
+            <div class="form-group"><label>Title</label><input type="text" id="noteTitle" placeholder="E.g. General Knowledge Complete Notes" required/></div>
+            <div class="form-group"><label>Subject</label>
+              <select><option>General Knowledge</option><option>Pakistan Affairs</option><option>Current Affairs</option><option>Islamic History</option><option>Mathematics</option><option>Computer Sciences</option><option>Urdu</option><option>Geography</option><option>Everyday Sciences</option><option>Indo-Pak History</option><option>Essay Writing</option></select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Available For</label>
+              <select><option>All Students</option><option>CSS/PMS</option><option>FPSC/PPSC</option><option>One Paper MCQs</option><option>IELTS</option></select>
+            </div>
+            <div class="form-group"><label>Date</label><input type="date"/></div>
+          </div>
+          <div class="form-group"><label>Upload File (PDF)</label><input type="file" accept=".pdf,.doc,.docx"/></div>
+          <div class="form-group"><label>Description (optional)</label><textarea placeholder="Brief description of the notes..."></textarea></div>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-upload"></i> Upload Notes</button>
+        </form>
+
+        <h3 style="font-family:var(--font-display);margin:28px 0 16px;color:var(--text-dark);">Uploaded Notes</h3>
+        <div class="resource-card"><div class="resource-icon"><i class="fas fa-file-pdf"></i></div><div class="resource-info"><strong>General Knowledge – Complete Notes</strong><span>GK | March 30, 2025 | All Students</span></div><div class="resource-actions"><button class="btn btn-sm btn-outline">Edit</button><button class="btn btn-sm btn-primary" style="background:var(--accent);">Delete</button></div></div>
+        <div class="resource-card"><div class="resource-icon" style="background:linear-gradient(135deg,var(--accent),#e55555);"><i class="fas fa-file-pdf"></i></div><div class="resource-info"><strong>Pakistan Affairs – Chapter 1-5</strong><span>Pakistan Affairs | March 28, 2025 | All Students</span></div><div class="resource-actions"><button class="btn btn-sm btn-outline">Edit</button><button class="btn btn-sm btn-primary" style="background:var(--accent);">Delete</button></div></div>
+      </div>
+    </div>
+
+    <!-- UPLOAD NEWSPAPER -->
+    <div data-tab-content="upload-newspaper">
+      <div class="dashboard-section">
+        <h2>Upload Daily Newspaper</h2>
+        <div id="paperUploadMsg" class="alert" style="display:none;"></div>
+        <form onsubmit="event.preventDefault(); showAlert('paperUploadMsg','Newspaper uploaded successfully!','success'); this.reset();">
+          <div class="form-row">
+            <div class="form-group"><label>Newspaper Name</label><select><option>Dawn</option><option>The News</option><option>Jang (Urdu)</option><option>Express Tribune</option><option>Nawa-i-Waqt</option></select></div>
+            <div class="form-group"><label>Date</label><input type="date" required/></div>
+          </div>
+          <div class="form-group"><label>Upload File (PDF/Image)</label><input type="file" accept=".pdf,.jpg,.jpeg,.png" required/></div>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-newspaper"></i> Upload Newspaper</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ANNOUNCEMENTS -->
+    <div data-tab-content="announcements">
+      <div class="dashboard-section">
+        <h2>Post Announcement</h2>
+        <div id="annMsg" class="alert" style="display:none;"></div>
+        <form id="announcementForm">
+          <div class="form-group"><label>Title</label><input type="text" placeholder="Announcement title" required/></div>
+          <div class="form-row">
+            <div class="form-group"><label>Target Audience</label><select><option>All Students</option><option>CSS/PMS</option><option>FPSC/PPSC</option><option>IELTS</option><option>One Paper</option></select></div>
+            <div class="form-group"><label>Priority</label><select><option>Normal</option><option>Important</option><option>Urgent</option></select></div>
+          </div>
+          <div class="form-group"><label>Message</label><textarea placeholder="Type your announcement here..." required></textarea></div>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-bullhorn"></i> Post Announcement</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- SCHEDULE -->
+    <div data-tab-content="schedule">
+      <div class="dashboard-section">
+        <h2>Edit Class Schedule</h2>
+        <div id="scheduleMsg" class="alert" style="display:none;"></div>
+        <form onsubmit="event.preventDefault(); showAlert('scheduleMsg','Schedule updated successfully!','success');">
+          <table style="margin-bottom:20px;">
+            <thead><tr><th>Subject</th><th>Teacher</th><th>Day</th><th>Time</th><th>Mode</th></tr></thead>
+            <tbody>
+              <tr><td><input value="General Knowledge" style="width:100%;padding:7px;border:1px solid var(--light-gray);border-radius:6px;font-family:var(--font-body);"/></td><td><input value="Sir Waleed Fazal" style="width:100%;padding:7px;border:1px solid var(--light-gray);border-radius:6px;font-family:var(--font-body);"/></td><td><select style="padding:7px;border:1px solid var(--light-gray);border-radius:6px;font-family:var(--font-body);"><option>Mon-Sat</option><option>Mon/Wed/Fri</option></select></td><td><input value="3:00 PM - 5:00 PM" style="width:120px;padding:7px;border:1px solid var(--light-gray);border-radius:6px;font-family:var(--font-body);"/></td><td><select style="padding:7px;border:1px solid var(--light-gray);border-radius:6px;font-family:var(--font-body);"><option>On-Campus + Online</option><option>Online Only</option><option>On-Campus Only</option></select></td></tr>
+              <tr><td><input value="Mathematics" style="width:100%;padding:7px;border:1px solid var(--light-gray);border-radius:6px;font-family:var(--font-body);"/></td><td><input value="Sir Manzoor Ishaq" style="width:100%;padding:7px;border:1px solid var(--light-gray);border-radius:6px;font-family:var(--font-body);"/></td><td><select style="padding:7px;border:1px solid var(--light-gray);border-radius:6px;font-family:var(--font-body);"><option>Mon-Sat</option></select></td><td><input value="5:00 PM - 7:00 PM" style="width:120px;padding:7px;border:1px solid var(--light-gray);border-radius:6px;font-family:var(--font-body);"/></td><td><select style="padding:7px;border:1px solid var(--light-gray);border-radius:6px;font-family:var(--font-body);"><option>On-Campus + Online</option></select></td></tr>
+            </tbody>
+          </table>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save Schedule</button>
+        </form>
+      </div>
+    </div>
+
+  </main>
+</div>
+<script src="../js/script.js"></script>
+<script>
+  document.querySelectorAll('.sidebar-nav a[data-tab]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const tab = link.dataset.tab;
+      document.querySelectorAll('.sidebar-nav a').forEach(a => a.classList.remove('active'));
+      link.classList.add('active');
+      document.querySelectorAll('[data-tab-content]').forEach(c => c.style.display = 'none');
+      const content = document.querySelector(`[data-tab-content="${tab}"]`);
+      if (content) content.style.display = 'block';
+    });
+  });
+</script>
+</body>
+</html>
